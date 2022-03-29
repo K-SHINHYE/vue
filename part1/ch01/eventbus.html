@@ -9,11 +9,12 @@
 </head>
 <body>
   <div id="app">
-    <child-component v-on:show-log="printText"></child-component>
+    <child-component v-on:show-log="printText" :propsdata="message"></child-component>
   </div>
   <script>
     Vue.component('child-component',{
-      template: '<button v-on:click="showLog">show</button>',
+      template: `<div><button v-on:click="showLog">show</button><div>{{propsdata}}</div></div>`,
+      props:['propsdata'],
       methods:{
         showLog: function(){
           this.$emit('show-log');
@@ -24,11 +25,11 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Hello Vue! passed from Parent COmponent'
+        message: 'Hello Vue! passed from Parent Component'
       },
       methods:{
         printText: function(){
-          console.log("received ad event");
+          console.log("received an event");
         }
       }
     })
