@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <router-view></router-view>
     <img alt="Vue logo" src="./assets/logo.png">
     <SimpleComp></SimpleComp>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
