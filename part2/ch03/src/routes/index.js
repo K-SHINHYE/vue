@@ -7,7 +7,19 @@ import ProfilePage from '@/pages/ProfilePage.vue'
 const routes = [
   { path: '/', component: MainPage},
   { path: '/login', component: LoginPage},
-  { path: '/profile', component: ProfilePage}
+  { path: '/login', component: LoginPage },
+  {
+    path: '/profile',
+    component: ProfilePage,
+    beforeEnter: (to, from, next) => {
+      // token이 있으면 다음단계로 넘어감
+      if (localStorage.getItem('token')) {
+        next();
+      } else {
+        next('/login');
+      }
+    },
+  },
 
 ];
 
