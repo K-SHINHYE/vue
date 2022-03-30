@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <HeaderModule></HeaderModule>
     <router-view></router-view>
     <img alt="Vue logo" src="./assets/logo.png">
     <SimpleComp></SimpleComp>
@@ -10,12 +11,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import SimpleComp from './components/SimpleComp.vue'
+import HeaderModule from './components/HeaderModule.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    SimpleComp
+    SimpleComp,
+    HeaderModule
 }
 }
 </script>
