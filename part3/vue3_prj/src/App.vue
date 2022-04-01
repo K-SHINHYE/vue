@@ -9,6 +9,7 @@ import NameList from './components/NameList.vue'
   <hr>
   <NameList msg="Hello Vue 3 + Vite" />
   <hr>
+  <hr>
 </template>
 
 <style>
