@@ -6,6 +6,7 @@ import NameList from './components/NameList.vue'
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <hr>
   <NameList msg="Hello Vue 3 + Vite" />
 </template>
 
